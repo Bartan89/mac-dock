@@ -18,13 +18,13 @@ export class DockItemComponent {
 
   // exstensible
   bounce$ = merge(this.startBounce$).pipe(
-    concatMap(() => this.bouncing$)
+    exhaustMap(() => this.bouncing$)
   )
 
 
 
   bouncing$ = defer(() => {
-    // defer postpones the evaluation of the observable until it get subscribed. This is useful when wanting to evaluate time from the moment the concatmap subs to bounces.
+    // defer postpones the evaluation of the observable until it get subscribed. This is useful when wanting to evaluate time from the moment the exhaustmap subs to bounces.
     const timeSinceBounceStart = Date.now()
     return interval(0, animationFrameScheduler).pipe(
       // non-deterministic 'temporal set' of frames, in other words as many 'ticks' as your computer can give you when the 'animation frame' is available.
