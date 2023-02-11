@@ -33,7 +33,7 @@ export class DockItemComponent {
       // same amount of frames but lower values for each
       // conceptually now best think of rotation in degrees and how a higher degree can be mapped to a longer leg of a triangle
       map(d => d + 4.7),
-      // with a offset value to assure the starting is at the same point as where the icon is
+      // with an arbitrary (trial and error) offset value to assure the starting is at the same point as where the icon is
       map(d => Math.sin(d) + 1),
       // now we are in triangle land (we do + 1 to assure only possitive values) imagine the right leg of a triangle length from 1 to 2 (due to +1) mapped to height
       map(h => h * 16),
