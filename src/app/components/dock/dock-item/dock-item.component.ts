@@ -26,7 +26,7 @@ export class DockItemComponent {
   bouncing$ = defer(() => {
     const timeSinceBounceStart = Date.now()
     return interval(0, animationFrameScheduler).pipe(
-      // non-deterministic 'temporal set' of frames, in other words as many 'ticks' as your computer can give you on the 'animation frame' is available.
+      // non-deterministic 'temporal set' of frames, in other words as many 'ticks' as your computer can give you when the 'animation frame' is available.
       map(() => Date.now() - timeSinceBounceStart),
       // turn whatever your CPU gives into deterministic 'frames' so that animation value (soon degrees) is temporaly smooth but precise.
       map(t => t / 100),
