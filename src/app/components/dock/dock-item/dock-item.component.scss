@@ -1,0 +1,18 @@
+.dock-item {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.47);
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  filter: brightness(1.2);
+  opacity: 0.7;
+} :hover {
+  opacity: 1;
+}
