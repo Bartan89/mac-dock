@@ -54,16 +54,16 @@ export class DockItemComponent {
 }
 
 
-// how to visual map degrees to pulsating motion
+// how to visual map degrees to pulsating motion* to get a sense how degrees are mapped to height
 
 //              /|
 //             / |
 //            /  |
-//  60 deg   /___| = 10px
+//  75 deg   /___| = 10px
 
 //
 //               /
 //             / |
-//  30 deg   /___| = 5px
+//  60 deg   /___| = 5px
 
 
